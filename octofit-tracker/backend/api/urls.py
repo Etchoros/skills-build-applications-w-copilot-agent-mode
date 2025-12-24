@@ -7,7 +7,6 @@ from .views import (
     ActivityViewSet,
     LeaderboardViewSet,
     WorkoutViewSet,
-    api_root,
 )
 
 router = DefaultRouter()
@@ -18,6 +17,5 @@ router.register(r'leaderboard', LeaderboardViewSet, basename='leaderboard')
 router.register(r'workouts', WorkoutViewSet, basename='workout')
 
 urlpatterns = [
-    path('', api_root, name='api-root'),
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]
