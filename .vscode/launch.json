@@ -22,11 +22,12 @@
       "request": "launch",
       "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
       "cwd": "${workspaceFolder}/octofit-tracker/frontend",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "/usr/local/opt/node@18/bin/npm",
       "runtimeArgs": ["start"],
       "port": 3000,
       "env": {
-        "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
+        "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}",
+        "PATH": "/usr/local/opt/node@18/bin:${env:PATH}"
       }
     }
   ]
